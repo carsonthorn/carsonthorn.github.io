@@ -14,3 +14,7 @@ RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^carsonthornart.com [NC]
+RewriteRule ^(.*)$ http://www.carsonthornart.com/$1 [L,R=301,NC]
